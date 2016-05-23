@@ -1,4 +1,4 @@
-package com.dheeru.flicks;
+package com.dheeru.flicks.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import com.dheeru.flicks.activity.MovieRatingActivity;
-import com.dheeru.flicks.activity.RecycleMovieActivity;
+import com.dheeru.flicks.MovieActivity;
+import com.dheeru.flicks.R;
 import com.dheeru.flicks.adapters.MovieArrayAdapter;
 import com.dheeru.flicks.models.Movie;
 import com.loopj.android.http.AsyncHttpClient;
@@ -24,29 +24,29 @@ import java.util.ArrayList;
 
 import cz.msebera.android.httpclient.Header;
 
-public class MovieActivity extends AppCompatActivity {
+public class MovieRatingActivity extends AppCompatActivity {
 
     ArrayList<Movie> movies;
     MovieArrayAdapter movieArrayAdapter;
     ListView lvItems;
-    String query ="http://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
-    public static String TAG = MovieActivity.class.getSimpleName();
+    String query ="http://api.themoviedb.org/3/movie/top_rated?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed";
+    public static String TAG = MovieRatingActivity.class.getSimpleName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.popular_movie);
+        setContentView(R.layout.activity_movie_rating);
         Log.d(TAG, "onCreate: SSSSSSSSSSSSSSSSSSSSSSSSS ");
         // Find the toolbar view inside the activity layout
-      Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
-      setSupportActionBar(toolbar);
-      getSupportActionBar().setDisplayShowHomeEnabled(true);
-      //  getSupportActionBar().setLogo(R.mipmap.ic_launcher);
-      getSupportActionBar().setDisplayUseLogoEnabled(true);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //  getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
         lvItems = (ListView)findViewById(R.id.lvmovie);
         movies= new ArrayList<Movie>();
-       // movies.add(new Movie("AAAA", "sdse", "LLLL"));
+        // movies.add(new Movie("AAAA", "sdse", "LLLL"));
         movieArrayAdapter=new MovieArrayAdapter(this, movies);
         lvItems.setAdapter(movieArrayAdapter);
         movieArrayAdapter.notifyDataSetChanged();
@@ -77,7 +77,7 @@ public class MovieActivity extends AppCompatActivity {
             }
         });
 
-       // Intent actionviewIntent = new Intent(Intent.ACTION_VIEW);
+        // Intent actionviewIntent = new Intent(Intent.ACTION_VIEW);
 
     }
 
@@ -149,4 +149,5 @@ public class MovieActivity extends AppCompatActivity {
     public String getQuery() {
         return query;
     }
+
 }

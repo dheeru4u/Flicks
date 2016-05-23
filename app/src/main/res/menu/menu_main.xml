@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:support="http://schemas.android.com/apk/res-auto"
     >
-    <item
-        android:id="@+id/miCompose"
-        android:icon="@drawable/donaldtrump"
-        app:showAsAction="ifRoom"
-        android:title="Compose">
-    </item>
-    <item
-        android:id="@+id/miProfile"
-        android:icon="@drawable/myphoto"
-        app:showAsAction="ifRoom|withText"
-        android:title="Profile">
-    </item>
+        <item
+            android:id="@+id/login"
+            app:showAsAction="withText"
+            android:title="login">
+        </item>
+        <item
+            android:id="@+id/menu_settings"
+            android:icon="@drawable/ic_action_settings"
+            android:title="@string/menu_settings"
+            support:showAsAction="never"/>
+        <item
+            android:id="@+id/popularity"
+            app:showAsAction="ifRoom|withText"
+            android:title="Popularity"
+            android:enabled="true" android:actionLayout="@layout/popular_movie"
+
+            >
+        </item>
+        <item
+            android:id="@+id/review"
+            app:showAsAction="ifRoom|withText"
+            android:title="Review"
+            android:enabled="true" android:actionLayout="@layout/activity_movie_rating"
+
+            >
+        </item>
+        <item
+            android:id="@+id/playingNow"
+            app:showAsAction="ifRoom|withText"
+            android:title="PlayingNow"
+            android:enabled="true" android:actionLayout="@layout/activity_movie"
+
+            >
+        </item>
+        <!--
+         android:onClick="sortByPapularity"
+         android:onClick="sortByReview"
+        -->
+
 </menu>

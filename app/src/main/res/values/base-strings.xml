@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="intro_message">
+        <![CDATA[
+
+            This sample shows you how to use Action Bar Compat to create a basic Activity which
+            displays action items. It covers inflating items from a menu resource, as well as adding
+            an item in code. Items that are not shown as action items on the Action Bar are
+            displayed in the action bar overflow.
+
+        ]]>
+    </string>
+</resources>
