@@ -13,6 +13,7 @@
             android:icon="@drawable/ic_action_settings"
             android:title="@string/menu_settings"
             support:showAsAction="never"/>
+
         <item
             android:id="@+id/popularity"
             app:showAsAction="ifRoom|withText"
@@ -34,7 +35,13 @@
             app:showAsAction="ifRoom|withText"
             android:title="PlayingNow"
             android:enabled="true" android:actionLayout="@layout/activity_movie"
-
+            >
+        </item>
+        <item
+            android:id="@+id/trailers"
+            app:showAsAction="ifRoom|withText"
+            android:title="Trailers"
+            android:enabled="true" android:actionLayout="@layout/activity_movie"
             >
         </item>
         <!--

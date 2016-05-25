@@ -196,6 +196,14 @@ public class RecycleMovieActivity extends AppCompatActivity {
         // Collections.sort(movies, Movie.MovieSortByPopularity);
         // movieArrayAdapter.notifyDataSetChanged();
     }
+    public  void playingTrailers(){
+        Log.d(TAG, "playingTrailers: QuickPlayActivity ");
+        Intent intent = new Intent(this, QuickPlayActivity.class);
+        startActivity(intent);
+        // Collections.sort(movies, Movie.MovieSortByPopularity);
+        // movieArrayAdapter.notifyDataSetChanged();
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -216,7 +224,9 @@ public class RecycleMovieActivity extends AppCompatActivity {
             case R.id.playingNow:
                 Log.d(TAG, "onOptionsItemSelected: playingNow");
                 playingNow();
-
+            case R.id.trailers:
+                Log.d(TAG, "onOptionsItemSelected: playingNow");
+                playingTrailers();
             default:
                 Log.d(TAG, "onOptionsItemSelected: popularity");
                 return super.onOptionsItemSelected(item);
