@@ -8,21 +8,21 @@
  
  The following **required** functionality is completed:
  
- * [Yes ] User can **scroll through current movies** from the Movie Database API
- * [Yes ] For each movie displayed, user can see the following details:
-   * [ Yes] Title, Poster Image, Overview (Portrait mode)
-   * [ Yes] Title, Backdrop Image, Overview (Landscape mode)
- * [ Yes] Layout is optimized with the [ViewHolder](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView#improving-performance-with-the-viewholder-pattern) pattern.
+ * [X ] User can **scroll through current movies** from the Movie Database API
+ * [X ] For each movie displayed, user can see the following details:
+   * [ X] Title, Poster Image, Overview (Portrait mode)
+   * [ X] Title, Backdrop Image, Overview (Landscape mode)
+ * [ X] Layout is optimized with the [ViewHolder](http://guides.codepath.com/android/Using-an-ArrayAdapter-with-ListView#improving-performance-with-the-viewholder-pattern) pattern.
  
  The following **optional** features are implemented:
  
- * [Yes ] User can **pull-to-refresh** popular stream to get the latest movies.
- * [Yes ] Display a nice default [placeholder graphic](http://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library#configuring-picasso) for each image during loading.
- * [ Yes] Improved the user interface through styling and coloring.
+ * [X ] User can **pull-to-refresh** popular stream to get the latest movies.
+ * [X ] Display a nice default [placeholder graphic](http://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library#configuring-picasso) for each image during loading.
+ * [ X] Improved the user interface through styling and coloring.
  
  The following **bonus** features are implemented:
  
- * [ Yes] Allow user to view details of the movie including ratings and popularity within a separate activity or dialog fragment.
+ * [ X] Allow user to view details of the movie including ratings and popularity within a separate activity or dialog fragment.
  * [ ] When viewing a popular movie (i.e. a movie voted for more than 5 stars) the video should show the full backdrop image as the layout.  Uses [Heterogenous ListViews](http://guides.codepath.com/android/Implementing-a-Heterogenous-ListView) or [Heterogenous RecyclerView](http://guides.codepath.com/android/Heterogenous-Layouts-inside-RecyclerView) to show different layouts.
  * [ ] Allow video trailers to be played in full-screen using the YouTubePlayerView.
      * [ ] Overlay a play icon for videos that can be played.
